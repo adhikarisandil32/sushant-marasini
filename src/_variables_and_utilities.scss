@@ -8,6 +8,8 @@ $green: #237a2c;
 $yellow: #ffd41e;
 
 //utility variables
+$nav-min-height: 80px;
+$button-border-radius: 8px;
 
 //container-component
 @each $key, $value in responsive.$breakpoints {
