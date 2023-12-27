@@ -1,0 +1,118 @@
+@use "../responsive";
+
+.hero-section {
+  height: calc(100vh - $nav-min-height);
+  position: relative;
+  background-image: url("/assets/hero-author.png");
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  // border: 4px solid black;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $purple;
+  }
+
+  @include responsive.lg {
+    background: $purple;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include responsive.lg {
+      justify-content: space-between;
+    }
+  }
+
+  .hero-text-and-buttons-block {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    // border: 4px solid blue;
+
+    @include responsive.lg {
+      text-align: left;
+    }
+
+    .hero-text-block {
+      .hero-info {
+        font-size: 1.5rem;
+        color: $white;
+      }
+
+      .hero-header {
+        font-size: 3rem;
+        color: $yellow;
+        font-weight: bold;
+      }
+    }
+
+    .hero-buttons-block {
+      a {
+        all: unset;
+        color: $white;
+        background-color: $green;
+        border-radius: $button-border-radius;
+        padding: 15px 30px;
+        cursor: pointer;
+        transition: background-color 0.25s linear;
+
+        &:hover {
+          background-color: darken($green, 10%);
+        }
+      }
+    }
+  }
+
+  .hero-imager {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // top: 0;
+    // left: 0;
+    display: none;
+    z-index: 10;
+    overflow-y: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 20%;
+      height: 100%;
+      width: 95%;
+      background-color: $white;
+      border-top-right-radius: 80px;
+      border-top-left-radius: 30px;
+
+      transform: skewY(-15deg);
+      z-index: -1;
+    }
+
+    @include responsive.lg {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      // border: 4px solid red;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 @import "variables_and_utilities";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 * {
@@ -11,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+  // border: 2px solid red;
 }
 
 :root {
@@ -20,3 +20,4 @@
 }
 
 @import "sections/header_section";
+@import "sections/hero_section";
