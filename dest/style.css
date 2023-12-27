@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@media (min-width: 0) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-section {
+  height: 100vh;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+.header-section .imager {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+.header-section .imager::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(52, 50, 50, 0.5);
+}
+.header-section .imager img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.header-section .navigation {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+.header-section .navigation .container {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-section .navigation a {
+  all: unset;
+  display: block;
+  cursor: pointer;
+}
+.header-section .navigation a .name {
+  text-align: center;
+  line-height: 1;
+  font-family: "Lobster", sans-serif;
+  text-shadow: 2px 2px 8px #343232;
+}
+.header-section .navigation .bars {
+  cursor: pointer;
+}
+.header-section .hero {
+  flex: 1 0 0;
+}
+.header-section .container {
+  height: 100%;
+  gap: 30px;
+  position: relative;
+}
+.header-section .hero-text-block {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-section .hero-text-block .hero-info {
+  font-size: 1.5rem;
+}
+.header-section .hero-text-block .hero-header {
+  font-size: 3rem;
+  color: #ffd41e;
+  font-weight: bold;
+}

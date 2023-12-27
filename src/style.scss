@@ -1,0 +1,22 @@
+@import "variables_and_utilities";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  &,
+  &::after,
+  &::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+@import "sections/header_section";

@@ -1,0 +1,95 @@
+@use "../responsive";
+
+.header-section {
+  height: 100vh;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+
+  .imager {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba($shadow, 0.5);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .navigation {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: sticky;
+    width: 100%;
+    top: 0;
+
+    .container {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a {
+      all: unset;
+      display: block;
+      cursor: pointer;
+
+      .name {
+        text-align: center;
+        line-height: 1;
+        font-family: "Lobster", sans-serif;
+        text-shadow: 2px 2px 8px $shadow;
+      }
+    }
+
+    .bars {
+      cursor: pointer;
+    }
+  }
+
+  .hero {
+    flex: 1 0 0;
+  }
+
+  .container {
+    height: 100%;
+    gap: 30px;
+    position: relative;
+  }
+
+  .hero-text-block {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .hero-info {
+      font-size: 1.5rem;
+    }
+
+    .hero-header {
+      font-size: 3rem;
+      color: $yellow;
+      font-weight: bold;
+    }
+  }
+}
